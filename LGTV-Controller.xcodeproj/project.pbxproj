@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,8 @@
 		8294E5F224325B8A00E5E002 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8294E5F124325B8A00E5E002 /* ViewController.swift */; };
 		8294E5F424325B8E00E5E002 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8294E5F324325B8E00E5E002 /* Assets.xcassets */; };
 		8294E5F724325B8E00E5E002 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8294E5F524325B8E00E5E002 /* Main.storyboard */; };
+		8294E60224325D2D00E5E002 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8294E60124325D2D00E5E002 /* Alamofire */; };
+		8294E605243260FF00E5E002 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8294E604243260FF00E5E002 /* Enviroment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,7 @@
 		8294E5F624325B8E00E5E002 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8294E5F824325B8E00E5E002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8294E5F924325B8E00E5E002 /* LGTV_Controller.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LGTV_Controller.entitlements; sourceTree = "<group>"; };
+		8294E604243260FF00E5E002 /* Enviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8294E60224325D2D00E5E002 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,14 +57,47 @@
 		8294E5EE24325B8A00E5E002 /* LGTV-Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8294E5EF24325B8A00E5E002 /* AppDelegate.swift */,
-				8294E5F124325B8A00E5E002 /* ViewController.swift */,
+				8294E603243260E400E5E002 /* Envoriment */,
+				8294E607243261F800E5E002 /* Application */,
+				8294E606243261F200E5E002 /* Controller */,
+				8294E6082432620100E5E002 /* Storyboard */,
 				8294E5F324325B8E00E5E002 /* Assets.xcassets */,
-				8294E5F524325B8E00E5E002 /* Main.storyboard */,
 				8294E5F824325B8E00E5E002 /* Info.plist */,
 				8294E5F924325B8E00E5E002 /* LGTV_Controller.entitlements */,
 			);
 			path = "LGTV-Controller";
+			sourceTree = "<group>";
+		};
+		8294E603243260E400E5E002 /* Envoriment */ = {
+			isa = PBXGroup;
+			children = (
+				8294E604243260FF00E5E002 /* Enviroment.swift */,
+			);
+			path = Envoriment;
+			sourceTree = "<group>";
+		};
+		8294E606243261F200E5E002 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8294E5F124325B8A00E5E002 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8294E607243261F800E5E002 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				8294E5EF24325B8A00E5E002 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		8294E6082432620100E5E002 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				8294E5F524325B8E00E5E002 /* Main.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -73,12 +110,16 @@
 				8294E5E824325B8A00E5E002 /* Sources */,
 				8294E5E924325B8A00E5E002 /* Frameworks */,
 				8294E5EA24325B8A00E5E002 /* Resources */,
+				8294E5FF24325C0D00E5E002 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "LGTV-Controller";
+			packageProductDependencies = (
+				8294E60124325D2D00E5E002 /* Alamofire */,
+			);
 			productName = "LGTV-Controller";
 			productReference = 8294E5EC24325B8A00E5E002 /* LGTV-Controller.app */;
 			productType = "com.apple.product-type.application";
@@ -107,6 +148,9 @@
 				Base,
 			);
 			mainGroup = 8294E5E324325B8A00E5E002;
+			packageReferences = (
+				8294E60024325D2D00E5E002 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 8294E5ED24325B8A00E5E002 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -128,12 +172,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8294E5FF24325C0D00E5E002 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=/usr/local/bin:$PATH\ncd \"$PROJECT_DIR\"/server-lgtv    \n#npm run xcode\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8294E5E824325B8A00E5E002 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8294E5F224325B8A00E5E002 /* ViewController.swift in Sources */,
+				8294E605243260FF00E5E002 /* Enviroment.swift in Sources */,
 				8294E5F024325B8A00E5E002 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,6 +392,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8294E60024325D2D00E5E002 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8294E60124325D2D00E5E002 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8294E60024325D2D00E5E002 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8294E5E424325B8A00E5E002 /* Project object */;
 }

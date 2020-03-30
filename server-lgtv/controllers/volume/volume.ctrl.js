@@ -18,4 +18,17 @@ module.exports = {
             return res.json(false);
         }
     },
+    volumeUp: async (req, res, next) => {
+        try {
+            lgtv.input_volumeup(vol, function (err, response) {
+                if (err) {
+                    return res.json(false);
+                } else {
+                    return res.json(true);
+                }
+            });
+        } catch (error) {
+            return res.json(false);
+        }
+    },
 }

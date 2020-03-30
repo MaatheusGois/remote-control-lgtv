@@ -1,7 +1,7 @@
 lgtv = require("lgtv");
 
 
-function connect() {
+function test() {
     return new Promise((resolve, reject) => {
         var retry_timeout = 10; // seconds
         lgtv.discover_ip(retry_timeout, function (err, ipaddr) {
@@ -12,7 +12,7 @@ function connect() {
                 if (err) {
                     reject(err);
                 }
-                lgtv.show_float('Conexão estabelecida!', function (err, response) {
+                lgtv['show_float']('Conexão estabelecida!', function (err, response) {
                     if (err) {
                         reject(err);
                     }
@@ -23,4 +23,4 @@ function connect() {
     })
 }
 
-connect()
+test()
