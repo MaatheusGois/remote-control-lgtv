@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  LGTV-Controller
 //
-//  Created by Matheus Silva on 29/03/20.
+//  Created by Matheus Silva on 30/03/20.
 //  Copyright © 2020 Matheus Gois. All rights reserved.
 //
 

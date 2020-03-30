@@ -7,24 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		82F2383524312A4800AD49B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F2383424312A4800AD49B1 /* AppDelegate.swift */; };
-		82F2383724312A4800AD49B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F2383624312A4800AD49B1 /* ViewController.swift */; };
-		82F2383924312A4A00AD49B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82F2383824312A4A00AD49B1 /* Assets.xcassets */; };
-		82F2383C24312A4A00AD49B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82F2383A24312A4A00AD49B1 /* Main.storyboard */; };
+		8294E5F024325B8A00E5E002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8294E5EF24325B8A00E5E002 /* AppDelegate.swift */; };
+		8294E5F224325B8A00E5E002 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8294E5F124325B8A00E5E002 /* ViewController.swift */; };
+		8294E5F424325B8E00E5E002 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8294E5F324325B8E00E5E002 /* Assets.xcassets */; };
+		8294E5F724325B8E00E5E002 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8294E5F524325B8E00E5E002 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		82F2383124312A4800AD49B1 /* LGTV-Controller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LGTV-Controller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		82F2383424312A4800AD49B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		82F2383624312A4800AD49B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		82F2383824312A4A00AD49B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		82F2383B24312A4A00AD49B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		82F2383D24312A4A00AD49B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		82F2383E24312A4A00AD49B1 /* LGTV_Controller.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LGTV_Controller.entitlements; sourceTree = "<group>"; };
+		8294E5EC24325B8A00E5E002 /* LGTV-Controller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LGTV-Controller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8294E5EF24325B8A00E5E002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8294E5F124325B8A00E5E002 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8294E5F324325B8E00E5E002 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8294E5F624325B8E00E5E002 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8294E5F824325B8E00E5E002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8294E5F924325B8E00E5E002 /* LGTV_Controller.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LGTV_Controller.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		82F2382E24312A4800AD49B1 /* Frameworks */ = {
+		8294E5E924325B8A00E5E002 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -34,31 +34,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		82F2382824312A4800AD49B1 = {
+		8294E5E324325B8A00E5E002 = {
 			isa = PBXGroup;
 			children = (
-				82F2383324312A4800AD49B1 /* LGTV-Controller */,
-				82F2383224312A4800AD49B1 /* Products */,
+				8294E5EE24325B8A00E5E002 /* LGTV-Controller */,
+				8294E5ED24325B8A00E5E002 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		82F2383224312A4800AD49B1 /* Products */ = {
+		8294E5ED24325B8A00E5E002 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				82F2383124312A4800AD49B1 /* LGTV-Controller.app */,
+				8294E5EC24325B8A00E5E002 /* LGTV-Controller.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		82F2383324312A4800AD49B1 /* LGTV-Controller */ = {
+		8294E5EE24325B8A00E5E002 /* LGTV-Controller */ = {
 			isa = PBXGroup;
 			children = (
-				82F2383424312A4800AD49B1 /* AppDelegate.swift */,
-				82F2383624312A4800AD49B1 /* ViewController.swift */,
-				82F2383824312A4A00AD49B1 /* Assets.xcassets */,
-				82F2383A24312A4A00AD49B1 /* Main.storyboard */,
-				82F2383D24312A4A00AD49B1 /* Info.plist */,
-				82F2383E24312A4A00AD49B1 /* LGTV_Controller.entitlements */,
+				8294E5EF24325B8A00E5E002 /* AppDelegate.swift */,
+				8294E5F124325B8A00E5E002 /* ViewController.swift */,
+				8294E5F324325B8E00E5E002 /* Assets.xcassets */,
+				8294E5F524325B8E00E5E002 /* Main.storyboard */,
+				8294E5F824325B8E00E5E002 /* Info.plist */,
+				8294E5F924325B8E00E5E002 /* LGTV_Controller.entitlements */,
 			);
 			path = "LGTV-Controller";
 			sourceTree = "<group>";
@@ -66,14 +66,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		82F2383024312A4800AD49B1 /* LGTV-Controller */ = {
+		8294E5EB24325B8A00E5E002 /* LGTV-Controller */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 82F2384124312A4A00AD49B1 /* Build configuration list for PBXNativeTarget "LGTV-Controller" */;
+			buildConfigurationList = 8294E5FC24325B8E00E5E002 /* Build configuration list for PBXNativeTarget "LGTV-Controller" */;
 			buildPhases = (
-				82F2382D24312A4800AD49B1 /* Sources */,
-				82F2382E24312A4800AD49B1 /* Frameworks */,
-				82F2382F24312A4800AD49B1 /* Resources */,
-				82F2384424312AB000AD49B1 /* ShellScript */,
+				8294E5E824325B8A00E5E002 /* Sources */,
+				8294E5E924325B8A00E5E002 /* Frameworks */,
+				8294E5EA24325B8A00E5E002 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -81,25 +80,25 @@
 			);
 			name = "LGTV-Controller";
 			productName = "LGTV-Controller";
-			productReference = 82F2383124312A4800AD49B1 /* LGTV-Controller.app */;
+			productReference = 8294E5EC24325B8A00E5E002 /* LGTV-Controller.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		82F2382924312A4800AD49B1 /* Project object */ = {
+		8294E5E424325B8A00E5E002 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Matheus Gois";
 				TargetAttributes = {
-					82F2383024312A4800AD49B1 = {
+					8294E5EB24325B8A00E5E002 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
 				};
 			};
-			buildConfigurationList = 82F2382C24312A4800AD49B1 /* Build configuration list for PBXProject "LGTV-Controller" */;
+			buildConfigurationList = 8294E5E724325B8A00E5E002 /* Build configuration list for PBXProject "LGTV-Controller" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -107,65 +106,45 @@
 				en,
 				Base,
 			);
-			mainGroup = 82F2382824312A4800AD49B1;
-			productRefGroup = 82F2383224312A4800AD49B1 /* Products */;
+			mainGroup = 8294E5E324325B8A00E5E002;
+			productRefGroup = 8294E5ED24325B8A00E5E002 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				82F2383024312A4800AD49B1 /* LGTV-Controller */,
+				8294E5EB24325B8A00E5E002 /* LGTV-Controller */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		82F2382F24312A4800AD49B1 /* Resources */ = {
+		8294E5EA24325B8A00E5E002 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82F2383924312A4A00AD49B1 /* Assets.xcassets in Resources */,
-				82F2383C24312A4A00AD49B1 /* Main.storyboard in Resources */,
+				8294E5F424325B8E00E5E002 /* Assets.xcassets in Resources */,
+				8294E5F724325B8E00E5E002 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		82F2384424312AB000AD49B1 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export PATH=/usr/local/bin:$PATH\ncd \"$PROJECT_DIR\"/server    \n#npm run xcode\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		82F2382D24312A4800AD49B1 /* Sources */ = {
+		8294E5E824325B8A00E5E002 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82F2383724312A4800AD49B1 /* ViewController.swift in Sources */,
-				82F2383524312A4800AD49B1 /* AppDelegate.swift in Sources */,
+				8294E5F224325B8A00E5E002 /* ViewController.swift in Sources */,
+				8294E5F024325B8A00E5E002 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		82F2383A24312A4A00AD49B1 /* Main.storyboard */ = {
+		8294E5F524325B8E00E5E002 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				82F2383B24312A4A00AD49B1 /* Base */,
+				8294E5F624325B8E00E5E002 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -173,7 +152,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		82F2383F24312A4A00AD49B1 /* Debug */ = {
+		8294E5FA24325B8E00E5E002 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -233,7 +212,7 @@
 			};
 			name = Debug;
 		};
-		82F2384024312A4A00AD49B1 /* Release */ = {
+		8294E5FB24325B8E00E5E002 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -286,7 +265,7 @@
 			};
 			name = Release;
 		};
-		82F2384224312A4A00AD49B1 /* Debug */ = {
+		8294E5FD24325B8E00E5E002 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -306,7 +285,7 @@
 			};
 			name = Debug;
 		};
-		82F2384324312A4A00AD49B1 /* Release */ = {
+		8294E5FE24325B8E00E5E002 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -329,25 +308,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		82F2382C24312A4800AD49B1 /* Build configuration list for PBXProject "LGTV-Controller" */ = {
+		8294E5E724325B8A00E5E002 /* Build configuration list for PBXProject "LGTV-Controller" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				82F2383F24312A4A00AD49B1 /* Debug */,
-				82F2384024312A4A00AD49B1 /* Release */,
+				8294E5FA24325B8E00E5E002 /* Debug */,
+				8294E5FB24325B8E00E5E002 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		82F2384124312A4A00AD49B1 /* Build configuration list for PBXNativeTarget "LGTV-Controller" */ = {
+		8294E5FC24325B8E00E5E002 /* Build configuration list for PBXNativeTarget "LGTV-Controller" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				82F2384224312A4A00AD49B1 /* Debug */,
-				82F2384324312A4A00AD49B1 /* Release */,
+				8294E5FD24325B8E00E5E002 /* Debug */,
+				8294E5FE24325B8E00E5E002 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 82F2382924312A4800AD49B1 /* Project object */;
+	rootObject = 8294E5E424325B8A00E5E002 /* Project object */;
 }
