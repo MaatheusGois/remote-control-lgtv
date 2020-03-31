@@ -1,26 +1,37 @@
-lgtv = require("lgtv");
+var lgtv = require('./lgtv')({
+    url: 'ws://lgwebostv:3000'
+});
+
+lgtv.on('error', function (err) {
+    console.log(err);
+});
+
+lgtv.on('connecting', function () {
+    console.log('connecting');
+});
+
+lgtv.on('connect', function () {
+    console.log('connected');
+    lgtv.getSocket(
+        'ssap://com.webos.service.networkinput/getPointerInputSocket',
+        function(err, sock) {
+            if (!err) {
+                sock.send('button', {name: 'UP'});
+            }
+        }
+    );
+    // lgtv.request('ssap://media.controls', "type:button\nname:UP\n\n", function (err, res) {
+    //     console.log(res)
+    // });
+});
 
 
-function test() {
-    return new Promise((resolve, reject) => {
-        var retry_timeout = 10; // seconds
-        lgtv.discover_ip(retry_timeout, function (err, ipaddr) {
-            if (err) {
-                reject('Failed to find TV IP address on the LAN. Verify that TV is on, and that you are on the same LAN/Wifi.');
-            } 
-            lgtv.connect(ipaddr, function (err, response) {
-                if (err) {
-                    reject(err);
-                }
-                lgtv['show_float']('Conexão estabelecida!', function (err, response) {
-                    if (err) {
-                        reject(err);
-                    }
-                    resolve(true);
-                });
-            });
-        }); 
-    })
-}
+lgtv.on('prompt', function () {
+    console.log('please authorize on TV');
+});
 
-test()
+lgtv.on('close', function () {
+    console.log('close');
+});
+
+

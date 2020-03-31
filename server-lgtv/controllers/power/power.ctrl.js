@@ -1,39 +1,61 @@
-lgtv = require("lgtv");
-
 module.exports = {
     connect: (req, res, next) => {
         try {
-            var retry_timeout = 10;
-            lgtv.discover_ip(retry_timeout, function (err, ipaddr) {
-                if (err) {
-                    return res.json('Failed to find TV IP address on the LAN. Verify that TV is on, and that you are on the same LAN/Wifi.');
-                }
-                lgtv.connect(ipaddr, function (err, response) {
-                    if (err) {
-                        return res.json(false);
-                    }
-                    let message = req.params.message || 'Conexão estabelecida!'
-                    lgtv.show_float(message, function (err, response) {
-                        if (err) {
-                            console.log(response);
-                            return res.json(false);
-                        } else {
-                            return res.json(true);
-                        }
-                    });
+            var lgtv = require('../../lgtv')({
+                url: 'ws://lgwebostv:3000'
+            });
+
+            lgtv.on('error', function (error) {
+                lgtv.disconnect();
+                return res.json({
+                    success: false,
+                    message: error.message
+                });
+            });
+
+            lgtv.on('connecting', function () {
+                console.log('connecting');
+            });
+
+            lgtv.on('connect', function () {
+                global.globalLGTV = lgtv;
+                return res.json({
+                    success: true
+                });
+            });
+
+
+            lgtv.on('prompt', function () {
+                return res.json({
+                    success: false,
+                    message: 'please authorize on TV'
+                });
+            });
+
+            lgtv.on('close', function () {
+                return res.json({
+                    success: false,
+                    message: 'close'
                 });
             });
         } catch (error) {
-            return res.json(error);
+            return res.json({
+                success: false,
+                message: error.message
+            });
         }
     },
     disconnect: (req, res, next) => {
         try {
-            lgtv.disconnect();
-            return res.json(true);
+            global.globalLGTV.disconnect()
+            return res.json({
+                success: true
+            });
         } catch (error) {
-            console.log('here')
-            return res.json(error);
+            return res.json({
+                success: false,
+                message: error.message
+            });
         }
     },
 }
