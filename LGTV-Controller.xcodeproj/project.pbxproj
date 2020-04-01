@@ -8,22 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		8294E5F024325B8A00E5E002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8294E5EF24325B8A00E5E002 /* AppDelegate.swift */; };
-		8294E5F224325B8A00E5E002 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8294E5F124325B8A00E5E002 /* ViewController.swift */; };
+		8294E5F224325B8A00E5E002 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8294E5F124325B8A00E5E002 /* MainController.swift */; };
 		8294E5F424325B8E00E5E002 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8294E5F324325B8E00E5E002 /* Assets.xcassets */; };
 		8294E5F724325B8E00E5E002 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8294E5F524325B8E00E5E002 /* Main.storyboard */; };
 		8294E60224325D2D00E5E002 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8294E60124325D2D00E5E002 /* Alamofire */; };
 		8294E605243260FF00E5E002 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8294E604243260FF00E5E002 /* Enviroment.swift */; };
+		8294E6302433FB7800E5E002 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8294E62F2433FB7800E5E002 /* String.swift */; };
+		8294E6332433FD9C00E5E002 /* Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8294E6322433FD9C00E5E002 /* Control.swift */; };
+		8294E6372433FF9100E5E002 /* ControlHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8294E6362433FF9100E5E002 /* ControlHandler.swift */; };
+		8294E63A2433FFE800E5E002 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8294E6392433FFE800E5E002 /* Button.swift */; };
+		8294E63E2434029D00E5E002 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8294E63D2434029D00E5E002 /* Channel.swift */; };
+		8294E64024340F3700E5E002 /* NSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8294E63F24340F3700E5E002 /* NSButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8294E5EC24325B8A00E5E002 /* LGTV-Controller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LGTV-Controller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8294E5EF24325B8A00E5E002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8294E5F124325B8A00E5E002 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8294E5F124325B8A00E5E002 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		8294E5F324325B8E00E5E002 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8294E5F624325B8E00E5E002 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8294E5F824325B8E00E5E002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8294E5F924325B8E00E5E002 /* LGTV_Controller.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LGTV_Controller.entitlements; sourceTree = "<group>"; };
 		8294E604243260FF00E5E002 /* Enviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
+		8294E62F2433FB7800E5E002 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		8294E6322433FD9C00E5E002 /* Control.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Control.swift; sourceTree = "<group>"; };
+		8294E6362433FF9100E5E002 /* ControlHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlHandler.swift; sourceTree = "<group>"; };
+		8294E6392433FFE800E5E002 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		8294E63D2434029D00E5E002 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		8294E63F24340F3700E5E002 /* NSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +69,10 @@
 		8294E5EE24325B8A00E5E002 /* LGTV-Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8294E6382433FFBC00E5E002 /* Enums */,
+				8294E62E2433FB6600E5E002 /* Extentions */,
+				8294E62D2433FAD100E5E002 /* Model */,
+				8294E62C2433F89400E5E002 /* Protocols */,
 				8294E603243260E400E5E002 /* Envoriment */,
 				8294E607243261F800E5E002 /* Application */,
 				8294E606243261F200E5E002 /* Controller */,
@@ -79,7 +95,7 @@
 		8294E606243261F200E5E002 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8294E5F124325B8A00E5E002 /* ViewController.swift */,
+				8294E5F124325B8A00E5E002 /* MainController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -98,6 +114,48 @@
 				8294E5F524325B8E00E5E002 /* Main.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		8294E62C2433F89400E5E002 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8294E62D2433FAD100E5E002 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8294E6312433FD7C00E5E002 /* Control */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8294E62E2433FB6600E5E002 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				8294E62F2433FB7800E5E002 /* String.swift */,
+				8294E63F24340F3700E5E002 /* NSButton.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		8294E6312433FD7C00E5E002 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				8294E6322433FD9C00E5E002 /* Control.swift */,
+				8294E6362433FF9100E5E002 /* ControlHandler.swift */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		8294E6382433FFBC00E5E002 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				8294E6392433FFE800E5E002 /* Button.swift */,
+				8294E63D2434029D00E5E002 /* Channel.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +255,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8294E5F224325B8A00E5E002 /* ViewController.swift in Sources */,
+				8294E5F224325B8A00E5E002 /* MainController.swift in Sources */,
 				8294E605243260FF00E5E002 /* Enviroment.swift in Sources */,
+				8294E63A2433FFE800E5E002 /* Button.swift in Sources */,
+				8294E6332433FD9C00E5E002 /* Control.swift in Sources */,
+				8294E6302433FB7800E5E002 /* String.swift in Sources */,
+				8294E6372433FF9100E5E002 /* ControlHandler.swift in Sources */,
+				8294E63E2434029D00E5E002 /* Channel.swift in Sources */,
+				8294E64024340F3700E5E002 /* NSButton.swift in Sources */,
 				8294E5F024325B8A00E5E002 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
