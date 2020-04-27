@@ -22,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		822C6416245666A900E6A1EE /* LGTV-Controller.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = "LGTV-Controller.xctestplan"; path = "../../Desktop/LGTV-Controller.xctestplan"; sourceTree = "<group>"; };
 		8294E5EC24325B8A00E5E002 /* LGTV-Controller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LGTV-Controller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8294E5EF24325B8A00E5E002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8294E5F124325B8A00E5E002 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
@@ -53,6 +54,7 @@
 		8294E5E324325B8A00E5E002 = {
 			isa = PBXGroup;
 			children = (
+				822C6416245666A900E6A1EE /* LGTV-Controller.xctestplan */,
 				8294E5EE24325B8A00E5E002 /* LGTV-Controller */,
 				8294E5ED24325B8A00E5E002 /* Products */,
 			);
@@ -233,7 +235,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		8294E5FF24325C0D00E5E002 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputFileListPaths = (
@@ -244,9 +246,9 @@
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "export PATH=/usr/local/bin:$PATH\ncd \"$PROJECT_DIR\"/server-lgtv    \n#npm run xcode\n";
+			shellScript = "export PATH=/usr/local/bin:$PATH\ncd \"$PROJECT_DIR\"/server-lgtv    \nnpm start\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

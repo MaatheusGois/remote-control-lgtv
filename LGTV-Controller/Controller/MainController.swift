@@ -5,6 +5,9 @@
 //  Created by Matheus Silva on 30/03/20.
 //  Copyright © 2020 Matheus Gois. All rights reserved.
 //
+//  https://www.openhab.org/addons/bindings/lgwebos/
+//  https://github.com/merdok/lgtv2/blob/master/README.md
+
 
 import Cocoa
 import Alamofire

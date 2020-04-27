@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon index.js",
-    "start": "node index.js",
-    "xcode": "npm install && npm install pm2 -g && pm2 del index.js && pm2 start index.js"
+    "nodemon": "nodemon index.js",
+    "start": "node index.js || echo working..."
   },
   "keywords": [],
   "author": "",
