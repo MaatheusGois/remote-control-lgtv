@@ -14,8 +14,6 @@
   </a>
 </p>
 
-> <h1 align=&#34;center&#34;>Welcome to server 👋</h1> <p>   <img alt=&#34;Preview&#34; src=&#34;./preview.png&#34;> </p> <p>   <a href=&#34;https://www.npmjs.com/package/server&#34; target=&#34;_blank&#34;>     <img alt=&#34;Version&#34; src=&#34;https://img.shields.io/npm/v/server.svg&#34;>   </a>   <a href=&#34;#&#34; target=&#34;_blank&#34;>     <img alt=&#34;License: ISC&#34; src=&#34;https://img.shields.io/badge/License-ISC-yellow.svg&#34; />   </a> </p>
-
 <p>
   <img alt="Preview" src="./preview.png">
 </p>
@@ -37,16 +35,15 @@ npm run start
 
 👤 **Matheus Gois <matheusgoislimasilva@gmail.com>**
 
-* Website: www.linkedin.com/in/maatheusgois/
+- Website: www.linkedin.com/in/maatheusgois/
 
-* Twitter: [@maatheusgois](https://twitter.com/maatheusgois)
+- Twitter: [@maatheusgois](https://twitter.com/maatheusgois)
 
-* GitHub: [@maatheusgois](https://github.com/maatheusgois)  
+- GitHub: [@maatheusgois](https://github.com/maatheusgois)
 
-* LinkedIn: [@maatheusgois](https://linkedin.com/in/maatheusgois)
+- LinkedIn: [@maatheusgois](https://linkedin.com/in/maatheusgois)
 
-* Dribbble: [@maatheusgois](https://dribbble.com/maatheusgois)
-
+- Dribbble: [@maatheusgois](https://dribbble.com/maatheusgois)
 
 ## 🤝 Contributing
 
@@ -61,8 +58,8 @@ Give a ⭐️ if this project helped you!
 Copyright © 2020 [Matheus Gois <matheusgoislimasilva@gmail.com>](https://github.com/MaatheusGois).<br />
 This project is [ISC](https://github.com/MaatheusGois/LGTV-Controller/blob/master/LICENSE) licensed.
 
-***
+---
+
 _For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life. 🙌🏻 John 3:16 [read-the-bible](https://biblia.com/bible/esv/john/3/16)_
 
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
-
