@@ -2,72 +2,75 @@
 module.exports = {
     button: (req, res, next) => {
         try {
-            let command = req.params.command
+            let command = req.params.command;
             if(!command) {
                 return res.json({
                     success: false,
-                    message: 'command is required'
+                    message: 'command is required',
                 });
             }
             if(!global.globalLGTV.isConnected()) {
                 return res.json({
                     success: false,
-                    message: 'tv not stay cconnected'
+                    message: 'tv not stay cconnected',
                 });
             }
             global.globalLGTV.getSocket(
                 'ssap://com.webos.service.networkinput/getPointerInputSocket',
-                function(error, sock) {
+                async function(error, sock) {
                     if (error) {
                         return res.json({
                             success: false,
-                            message: error
+                            message: error,
                         });
                     }
                     sock.send('button', {name: command.toUpperCase()});
                     return res.json({
-                        success: true
+                        success: true,
                     });
                 }
             );
         } catch (error) {
             return res.json({
                 success: false,
-                message: error.message
+                message: error.message,
             });
         }
     },
     channel: (req, res, next) => {
         try {
-            let command = req.body.command
+            let command = req.body.command;
+            let value = req.body.value || {};
+            
             if(!command) {
                 return res.json({
                     success: false,
-                    message: 'command is required'
+                    message: 'command is required',
                 });
             }
             if(!global.globalLGTV.isConnected()) {
                 return res.json({
                     success: false,
-                    message: 'tv not stay cconnected'
+                    message: 'tv not stay cconnected',
                 });
             }
-            global.globalLGTV.subscribe(command, function (err, response) {
+            global.globalLGTV.request(command, value, function (err, response) {
                 if(err) {
                     return res.json({
                         success: false,
-                        message: err.message
+                        message: err.message,
                     });
                 }
                 return res.json({
-                    success: true
+                    success: true,
+                    message: response,
                 });
             });
             
         } catch (error) {
             return res.json({
                 success: false,
-                message: error.message
+                message: error.message,
             });
         }
     },

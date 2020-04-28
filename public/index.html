@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <!-- SCRIPTS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"
         defer></script>
@@ -16,6 +18,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"
         defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" defer></script>
+    
+    <script src="/assets/js/commands.js" defer></script>
+    <script src="/assets/js/power.js" defer></script>
+    <!-- END SCRIPTS -->
+
     <title>Remote Control</title>
 </head>
 
@@ -26,9 +34,13 @@
         <div class="container control-lgtv">
             <!-- 1 -->
             <div class="row" style="margin-bottom: 20px;">
-                <div class="col">
-                    <img src="/assets/img/power_button.png" alt="" width="42" height="42">
-                </div>
+                    <div class="col">
+                        <a onclick="start()">
+                        <img src="/assets/img/power_button.png" alt="" width="42" height="42">
+                        </a>
+                    </div>
+                
+                
                 <div class="col">
                 </div>
                 <div class="col">
@@ -37,13 +49,13 @@
             <!-- 2 -->
             <div class="row">
                 <div class="col">
-                    <a href="#">
+                    <a onclick="channel('ssap://audio/volumeUp')">
                         <img src="/assets/img/up_button.png" alt="" width="52" height="42">
                     </a>
                 </div>
                 <div class="col"></div>
                 <div class="col">
-                    <a href="#">
+                    <a onclick="channel('ssap://tv/channelUp')">
                         <img src="/assets/img/up_button.png" alt="" width="52" height="42">
                     </a>
                 </div>
@@ -52,31 +64,35 @@
             <!-- 3 -->
             <div class="row">
                 <div class="col">
-                    <a href="#">
+                    <a>
                         <img src="/assets/img/vol_button.png" alt="" width="52" height="42">
                     </a>
                 </div>
                 <div class="col">
-                    <img src="/assets/img/input_button.png" alt="" width="52" height="42">
+                    <a onclick="notImplemented()">
+                        <img src="/assets/img/input_button.png" alt="" width="52" height="42">
+                    </a>
                 </div>
                 <div class="col">
-                    <img src="/assets/img/ch_button.png" alt="" width="52" height="42">
+                    <a>
+                        <img src="/assets/img/ch_button.png" alt="" width="52" height="42">
+                    </a>
                 </div>
             </div>
             <!-- 4 -->
             <div class="row">
                 <div class="col">
-                    <a href="#">
+                    <a onclick="channel('ssap://audio/volumeDown')">
                         <img src="/assets/img/down_button.png" alt="" width="52" height="42">
                     </a>
                 </div>
                 <div class="col">
-                    <a href="#">
+                    <a onclick="channel('ssap://media.controls/rewind')">
                         <img src="/assets/img/mute_button.png" alt="" width="52" height="42">
                     </a>
                 </div>
                 <div class="col">
-                    <a href="#">
+                    <a onclick="channel('ssap://tv/channelDown')">
                         <img src="/assets/img/down_button.png" alt="" width="52" height="42">
                     </a>
                 </div>
@@ -85,17 +101,17 @@
             <!-- 5 -->
             <div class="row">
                 <div class="col">
-                    <a href="#">
+                    <a onclick="notImplemented()">
                         <img src="/assets/img/apps_button.png" alt="" width="52" height="42">
                     </a>
                 </div>
                 <div class="col">
-                    <a href="#">
+                    <a onclick="button('HOME')">
                         <img src="/assets/img/home_button.png" alt="" width="52" height="42">
                     </a>
                 </div>
                 <div class="col">
-                    <a href="#">
+                    <a onclick="notImplemented()">
                         <img src="/assets/img/guide_button.png" alt="" width="52" height="42">
                     </a>
                 </div>
@@ -104,17 +120,17 @@
             <!-- 6 -->
             <div class="row">
                 <div class="col">
-                    <a href="#">
+                    <a onclick="notImplemented()">
                         <img src="/assets/img/config_button.png" alt="" width="52" height="42">
                     </a>
                 </div>
                 <div class="col">
-                    <a href="#">
+                    <a onclick="button('UP')">
                         <img src="/assets/img/up_button.png" alt="" width="52" height="42">
                     </a>
                 </div>
                 <div class="col">
-                    <a href="#">
+                    <a onclick="channel('')">
                         <img src="/assets/img/info_button.png" alt="" width="52" height="42">
                     </a>
                 </div>
@@ -123,17 +139,17 @@
             <!-- 7 -->
             <div class="row">
                 <div class="col">
-                    <a href="#">
+                    <a onclick="button('LEFT')">
                         <img src="/assets/img/left_button.png" alt="" width="52" height="42">
                     </a>
                 </div>
                 <div class="col">
-                    <a href="#">
+                    <a onclick="button('ENTER')">
                         <img src="/assets/img/ok_button.png" alt="" width="52" height="42">
                     </a>
                 </div>
                 <div class="col">
-                    <a href="#">
+                    <a onclick="button('RIGHT')">
                         <img src="/assets/img/right_button.png" alt="" width="52" height="42">
                     </a>
                 </div>
@@ -142,18 +158,37 @@
             <!-- 8 -->
             <div class="row">
                 <div class="col">
-                    <a href="#">
+                    <a onclick="button('BACK')">
                         <img src="/assets/img/back_button.png" alt="" width="54" height="41">
                     </a>
                 </div>
                 <div class="col">
-                    <a href="#">
+                    <a onclick="button('DOWN')">
                         <img src="/assets/img/down_button.png" alt="" width="52" height="42">
                     </a>
                 </div>
                 <div class="col">
-                    <a href="#">
+                    <a onclick="button('EXIT')">
                         <img src="/assets/img/exit_button.png" alt="" width="52" height="42">
+                    </a>
+                </div>
+            </div>
+
+            <!-- 9 -->
+            <div class="row">
+                <div class="col">
+                    <a onclick="channelID('youtube.leanback.v4')">
+                        <img src="/assets/img/youtube_button.png" alt="" width="54" height="41">
+                    </a>
+                </div>
+                <div class="col">
+                    <a onclick="channelID('netflix')">
+                        <img src="/assets/img/netflix_button.png" alt="" width="52" height="42">
+                    </a>
+                </div>
+                <div class="col">
+                    <a onclick="channelID('globoplaywebos')">
+                        <img src="/assets/img/globoplay_button.png" alt="" width="52" height="42">
                     </a>
                 </div>
             </div>
@@ -162,7 +197,7 @@
             <!-- END -->
         </div>
 
-        <p class="mt-5 mb-3 text-muted">&copy; By MaatheusGois</p>
+        <p class="mt-5 mb-3 text-muted">&copy; By <a href="http://www.github.com/maatheusgois"  target="_blank"><b>MaatheusGois</b></a> </p>
     </form>
 </body>
 

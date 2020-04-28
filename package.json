@@ -1,14 +1,13 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "nodemon": "nodemon index.js",
     "start": "node index.js || echo working..."
   },
   "keywords": [],
-  "author": "",
+  "author": "Matheus Gois <matheusgoislimasilva@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "async": "^3.2.0",
@@ -23,5 +22,7 @@
     "pm2": "^4.2.3",
     "util": "^0.12.2",
     "websocket": "^1.0.31"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }
