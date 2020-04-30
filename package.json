@@ -10,8 +10,7 @@
     "pack": "electron-builder --dir",
     "dist-linux": "electron-builder -l",
     "dist-windows": "electron-builder -w",
-    "dist-mac": "electron-builder -m",
-    "sign": "gulp selfsign"
+    "dist-mac": "electron-builder -m"
   },
   "build": {
     "appId": "maatheusgois.lgtv.remote.control",
