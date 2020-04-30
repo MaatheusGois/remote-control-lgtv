@@ -2,14 +2,8 @@
 const { app, BrowserWindow, systemPreferences } = require('electron')
 const path = require('path')
 const { server } = require('./src/index')
+const { selfsign } = require('./gulpfile')
 const port = process.env.PORT || 6767
-
-// SERVER
-const runServer = () => {
-  server.listen(port, () => console.log(`App listening on port ${port}!`))
-}
-runServer()
-// END SERVER
 
 // DEV
 console.log(systemPreferences.isDarkMode())
@@ -35,7 +29,10 @@ function createWindow () {
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
-app.whenReady().then(createWindow)
+app.whenReady()
+  .then(selfsign())
+  .then(server.listen(port, () => console.log(`App listening on port ${port}!`)))
+  .then(createWindow)
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function () {
