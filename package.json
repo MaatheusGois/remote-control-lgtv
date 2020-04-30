@@ -1,43 +1,44 @@
 {
-  "name": "server",
+  "name": "lgtv-controler",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "A minimal Electron application",
+  "main": "main.js",
   "scripts": {
-    "nodemon": "nodemon index.js",
-    "start": "node index.js || echo working..."
+    "start": "electron ."
   },
-  "keywords": [],
-  "author": "Matheus Gois <matheusgoislimasilva@gmail.com>",
-  "license": "ISC",
+  "repository": "",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
   "dependencies": {
     "async": "^3.2.0",
     "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "electron": "^8.2.4",
     "events": "^3.1.0",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
     "helmet": "^3.22.0",
     "lgtv": "^0.2.4",
-    "mkdirp": "^1.0.3",
+    "mkdirp": "^1.0.4",
     "persist-path": "^1.0.2",
     "pm2": "^4.4.0",
     "util": "^0.12.2",
     "websocket": "^1.0.31"
   },
+  "author": "GitHub",
+  "license": "CC0-1.0",
   "devDependencies": {
+    "electron": "^8.2.4",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1"
-  },
-  "description": "<h1 align=\"center\">Welcome to server 👋</h1> <p>   <img alt=\"Preview\" src=\"./preview.png\"> </p> <p>   <a href=\"https://www.npmjs.com/package/server\" target=\"_blank\">     <img alt=\"Version\" src=\"https://img.shields.io/npm/v/server.svg\">   </a>   <a href=\"#\" target=\"_blank\">     <img alt=\"License: ISC\" src=\"https://img.shields.io/badge/License-ISC-yellow.svg\" />   </a> </p>",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MaatheusGois/LGTV-Controller.git"
-  },
-  "bugs": {
-    "url": "https://github.com/MaatheusGois/LGTV-Controller/issues"
-  },
-  "homepage": "https://github.com/MaatheusGois/LGTV-Controller#readme"
+  }
 }

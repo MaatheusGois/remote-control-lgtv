@@ -5,7 +5,7 @@ const channel = (command, value) => {
     value
   })
 
-  fetch('/channel', {
+  fetch('http://localhost:6767/channel', {
     method: 'POST',
     headers: {
       Accept: 'application/json',
@@ -25,7 +25,7 @@ const channel = (command, value) => {
 }
 
 const button = (command) => {
-  fetch(`/button/${command}`)
+  fetch(`http://localhost:6767}/button/${command}`)
     .then(function (response) {
       return response.json()
     })

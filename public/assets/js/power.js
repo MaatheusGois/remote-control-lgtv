@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 const start = () => {
   console.log('connet')
-  fetch('/connect')
+  fetch('http://localhost:6767/connect')
     .then(function (response) {
       return response.json()
     })
