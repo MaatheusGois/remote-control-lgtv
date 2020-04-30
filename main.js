@@ -1,21 +1,24 @@
 // Modules to control application life and create native browser window
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, systemPreferences } = require('electron')
 const { server } = require('./src/index')
 const path = require('path')
 const port = process.env.PORT || 6767
 
 // SERVER
 const runServer = () => {
-  console.log('runServer() start')
   server.listen(port, () => console.log(`App listening on port ${port}!`))
 }
 runServer()
 // END SERVER
 
+// DEV
+console.log(systemPreferences.isDarkMode())
+// END DEV
+
 function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 300,
+    width: 800,
     height: 800,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
@@ -26,7 +29,7 @@ function createWindow () {
   mainWindow.loadFile('./src/public/index.html')
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished

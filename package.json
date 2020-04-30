@@ -4,7 +4,16 @@
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "postinstall": "install-app-deps",
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "maatheusgois.lgtv.remote.control",
+    "mac": {
+      "category": "maatheusgois.lgtv.remote.control"
+    }
   },
   "repository": "",
   "keywords": [
@@ -18,7 +27,6 @@
     "async": "^3.2.0",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
-    "electron": "^8.2.4",
     "events": "^3.1.0",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
@@ -34,6 +42,7 @@
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^8.2.4",
+    "electron-builder": "^22.6.0",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.20.2",

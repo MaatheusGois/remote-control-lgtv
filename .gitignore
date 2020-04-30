@@ -1,3 +1,5 @@
+*.mobileprovision
+*.provisionprofile
 # Logs
 logs
 *.log

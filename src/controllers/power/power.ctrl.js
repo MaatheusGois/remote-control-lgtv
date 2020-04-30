@@ -14,7 +14,7 @@ module.exports = {
       })
 
       lgtv.on('connecting', function () {
-        console.log('connecting')
+        console.log('connecting...')
       })
 
       lgtv.on('connect', function () {
