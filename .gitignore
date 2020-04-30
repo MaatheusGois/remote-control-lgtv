@@ -1,3 +1,5 @@
+.vscode
+
 *.mobileprovision
 *.provisionprofile
 # Logs

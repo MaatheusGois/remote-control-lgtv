@@ -6,10 +6,12 @@
   "scripts": {
     "postinstall": "install-app-deps",
     "start": "electron .",
+    "nodemon": "nodemon -e js,json,html nodemon.js",
     "pack": "electron-builder --dir",
     "dist-linux": "electron-builder -l",
     "dist-windows": "electron-builder -w",
-    "dist-mac": "electron-builder -m"
+    "dist-mac": "electron-builder -m",
+    "sign": "gulp selfsign"
   },
   "build": {
     "appId": "maatheusgois.lgtv.remote.control",
@@ -36,11 +38,14 @@
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "events": "^3.1.0",
+    "exeq": "^3.0.0",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
+    "gulp": "^4.0.2",
     "helmet": "^3.22.0",
     "lgtv": "^0.2.4",
     "mkdirp": "^1.0.4",
+    "path": "^0.12.7",
     "persist-path": "^1.0.2",
     "pm2": "^4.4.0",
     "util": "^0.12.2",

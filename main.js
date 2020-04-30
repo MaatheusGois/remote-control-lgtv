@@ -1,7 +1,7 @@
 // Modules to control application life and create native browser window
 const { app, BrowserWindow, systemPreferences } = require('electron')
-const { server } = require('./src/index')
 const path = require('path')
+const { server } = require('./src/index')
 const port = process.env.PORT || 6767
 
 // SERVER
