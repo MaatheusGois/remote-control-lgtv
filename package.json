@@ -7,20 +7,28 @@
     "postinstall": "install-app-deps",
     "start": "electron .",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "dist-linux": "electron-builder -l",
+    "dist-windows": "electron-builder -w",
+    "dist-mac": "electron-builder -m"
   },
   "build": {
     "appId": "maatheusgois.lgtv.remote.control",
     "mac": {
-      "category": "maatheusgois.lgtv.remote.control"
+      "category": "maatheusgois.lgtv.remote.control",
+      "icon": "icon.png"
+    },
+    "nsis": {
+      "perMachine": true
+    },
+    "linux": {
+      "target": "AppImage"
     }
   },
   "repository": "",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
+    "electron",
+    "lgtv",
+    "remote control",
     "demo"
   ],
   "dependencies": {
@@ -39,7 +47,7 @@
     "websocket": "^1.0.31"
   },
   "author": "GitHub",
-  "license": "CC0-1.0",
+  "license": "MIT",
   "devDependencies": {
     "electron": "^8.2.4",
     "electron-builder": "^22.6.0",
