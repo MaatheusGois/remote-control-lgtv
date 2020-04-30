@@ -1,6 +1,6 @@
 // Modules to control application life and create native browser window
 const { app, BrowserWindow } = require('electron')
-const { server } = require('./index')
+const { server } = require('./src/index')
 const path = require('path')
 const port = process.env.PORT || 6767
 
@@ -23,7 +23,7 @@ function createWindow () {
   })
 
   // and load the index.html of the app.
-  mainWindow.loadFile('./public/index.html')
+  mainWindow.loadFile('./src/public/index.html')
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
