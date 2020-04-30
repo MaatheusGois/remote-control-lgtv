@@ -25,7 +25,7 @@ const channel = (command, value) => {
 }
 
 const button = (command) => {
-  fetch(`http://localhost:6767}/button/${command}`)
+  fetch(`http://localhost:6767/button/${command}`)
     .then(function (response) {
       return response.json()
     })
