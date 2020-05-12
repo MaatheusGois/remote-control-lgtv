@@ -1,3 +1,4 @@
+/* eslint-disable standard/no-callback-literal */
 // Modules to control application life and create native browser window
 const { app, BrowserWindow, systemPreferences } = require('electron')
 const path = require('path')
@@ -12,12 +13,16 @@ console.log(systemPreferences.isDarkMode())
 function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 240,
-    height: 675,
+    width: 260,
+    height: 700,
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js')
+      preload: path.join(__dirname, 'preload.js'),
+      webSecurity: false
     }
   })
+
+  // disable security in windows
+  app.commandLine.appendSwitch('allow-insecure-localhost', 'true')
 
   // and load the index.html of the app.
   mainWindow.loadFile('./src/public/index.html')
@@ -46,6 +51,13 @@ app.on('activate', function () {
   // On macOS it's common to re-create a window in the app when the
   // dock icon is clicked and there are no other windows open.Z
   if (BrowserWindow.getAllWindows().length === 0) createWindow()
+})
+
+app.on('certificate-error', (event, webContents, url, error, certificate, callback) => {
+  // On certificate error we disable default behaviour (stop loading the page)
+  // and we then say "it is all fine - true" to the callback
+  event.preventDefault()
+  callback(true)
 })
 
 // In this file you can include the rest of your app's specific main process

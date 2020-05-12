@@ -2,7 +2,7 @@ module.exports = {
   connect: (req, res, next) => {
     try {
       var lgtv = require('../../lgtv')({
-        url: 'ws://192.168.1.252:3000'
+        url: 'ws://lgwebostv:3000'
       })
 
       lgtv.on('error', function (error) {
