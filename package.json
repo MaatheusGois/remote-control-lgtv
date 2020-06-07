@@ -8,10 +8,11 @@
     "start": "electron .",
     "nodemon": "nodemon -e js,json,html server.js",
     "pack": "electron-builder --dir",
-    "dist-linux": "electron-builder -l",
-    "dist-windows": "electron-builder -w --ia32",
-    "dist-mac": "electron-builder -m"
+    "dist:linux": "electron-builder --linux",
+    "dist:windows": "electron-builder -w --ia32",
+    "dist:mac": "electron-builder -m"
   },
+  "homepage": "https://github.com/MaatheusGois/Remote-Control-LGTV",
   "build": {
     "appId": "maatheusgois.lgtv.remote.control",
     "mac": {
@@ -22,7 +23,7 @@
       "perMachine": true
     },
     "linux": {
-      "target": "AppImage"
+      "target": "deb"
     }
   },
   "repository": "",
@@ -52,7 +53,10 @@
     "util": "^0.12.2",
     "websocket": "^1.0.31"
   },
-  "author": "GitHub",
+  "author": {
+    "name": "Matheus Gois",
+    "email": "matheusgoislimasilva@gmail.com"
+  },
   "license": "MIT",
   "devDependencies": {
     "electron": "^8.2.4",
