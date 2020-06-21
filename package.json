@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "postinstall": "install-app-deps",
-    "start": "electron .",
+    "start": "node server",
+    "start:electron": "electron .",
     "nodemon": "nodemon -e js,json,html server.js",
     "pack": "electron-builder --dir",
     "dist:linux": "electron-builder --linux",
