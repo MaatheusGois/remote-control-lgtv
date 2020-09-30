@@ -35,174 +35,214 @@
 <body class="text-center">
     <form class="form-signin">
         <!-- <img class="mb-4" src="./assets/img/tv.svg" alt="" width="72" height="72"> -->
-        <h1 class="h3 mb-3 font-weight-normal">LGTV</h1>
+        <h1 class="h4 mb-3 font-weight-normal">LGTV</h1>
         <div class="container control-lgtv">
-            <!-- 1 -->
-            <div class="row" style="margin-bottom: 20px;">
-                <div class="col">
-                    <a onclick="start()">
+            <!-- LOAD -->
+            <section id="load-full" style="display: none;">
+                <div class="returnButton">
+                    <a onclick="returnButton()">
+                        <img src="./assets/img/return_button.png" alt="" width="52" height="42">
+                    </a>
+                </div>
+                <div class="container">
+                    <div class="lds-ripple">
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </section>
+            <!-- END LOAD -->
+
+            <!-- APP-LIST -->
+            <section id="app-list"  style="display: none;">
+                <!-- BUTTON BACK -->
+                <div class="returnButton">
+                    <a onclick="returnButton()">
+                        <img src="./assets/img/return_button.png" alt="" width="52" height="42">
+                    </a>
+                </div>
+                <!-- END BUTTON BACK -->
+
+                <!-- LIST -->
+                <!-- channelID('globoplaywebos') -->
+                
+                
+                <!-- END LIST -->
+            </section>
+            <!-- END APP-LIST -->
+
+            <!-- BUTTONS -->
+            <section id="buttons">
+                <!-- 1 -->
+                <div class="row mb-20">
+                    <div class="col">
+                        <!-- <a onclick="start()">
                         <img src="./assets/img/power_button.png" alt="" width="42" height="42">
-                    </a>
-                </div>
+                    </a> -->
+                    </div>
 
 
-                <div class="col">
+                    <div class="col">
+                    </div>
+                    <div class="col click-button">
+                        <a onclick="start()">
+                            <img src="./assets/img/off_wifi_button.png" id="wifi" alt="" height="48">
+                            <div class="lds-ripple" id="load" style="display: none;">
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="col">
-                    <a onclick="start()">
-                        <img src="./assets/img/off_wifi_button.png" id="wifi" alt="" width="52" height="42">
-                        <div class="lds-ripple" id="load" style="display: none;"><div></div><div></div></div>
-                    </a>
+                <!-- 2 -->
+                <div class="row">
+                    <div class="col click-button">
+                        <a onclick="channel('ssap://audio/volumeUp')">
+                            <img src="./assets/img/up_button.png" alt="" width="52" height="42">
+                        </a>
+                    </div>
+                    <div class="col"></div>
+                    <div class="col click-button">
+                        <a onclick="channel('ssap://tv/channelUp')">
+                            <img src="./assets/img/up_button.png" alt="" width="52" height="42">
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <!-- 2 -->
-            <div class="row">
-                <div class="col">
-                    <a onclick="channel('ssap://audio/volumeUp')">
-                        <img src="./assets/img/up_button.png" alt="" width="52" height="42">
-                    </a>
-                </div>
-                <div class="col"></div>
-                <div class="col">
-                    <a onclick="channel('ssap://tv/channelUp')">
-                        <img src="./assets/img/up_button.png" alt="" width="52" height="42">
-                    </a>
-                </div>
-            </div>
 
-            <!-- 3 -->
-            <div class="row">
-                <div class="col">
-                    <a>
-                        <img src="./assets/img/vol_button.png" alt="" width="52" height="42">
-                    </a>
+                <!-- 3 -->
+                <div class="row">
+                    <div class="col click-button">
+                        <a>
+                            <img src="./assets/img/vol_button.png" alt="" width="52" height="42">
+                        </a>
+                    </div>
+                    <div class="col click-button">
+                        <a onclick="notImplemented()">
+                            <img src="./assets/img/input_button.png" alt="" width="52" height="42">
+                        </a>
+                    </div>
+                    <div class="col click-button">
+                        <a>
+                            <img src="./assets/img/ch_button.png" alt="" width="52" height="42">
+                        </a>
+                    </div>
                 </div>
-                <div class="col">
-                    <a onclick="notImplemented()">
-                        <img src="./assets/img/input_button.png" alt="" width="52" height="42">
-                    </a>
+                <!-- 4 -->
+                <div class="row">
+                    <div class="col click-button">
+                        <a onclick="channel('ssap://audio/volumeDown')">
+                            <img src="./assets/img/down_button.png" alt="" width="52" height="42">
+                        </a>
+                    </div>
+                    <div class="col click-button">
+                        <a onclick="muteButton()">
+                            <img src="./assets/img/mute_button.png" alt="" width="52" height="42">
+                        </a>
+                    </div>
+                    <div class="col click-button">
+                        <a onclick="channel('ssap://tv/channelDown')">
+                            <img src="./assets/img/down_button.png" alt="" width="52" height="42">
+                        </a>
+                    </div>
                 </div>
-                <div class="col">
-                    <a>
-                        <img src="./assets/img/ch_button.png" alt="" width="52" height="42">
-                    </a>
-                </div>
-            </div>
-            <!-- 4 -->
-            <div class="row">
-                <div class="col">
-                    <a onclick="channel('ssap://audio/volumeDown')">
-                        <img src="./assets/img/down_button.png" alt="" width="52" height="42">
-                    </a>
-                </div>
-                <div class="col">
-                    <a onclick="notImplemented()">
-                        <img src="./assets/img/mute_button.png" alt="" width="52" height="42">
-                    </a>
-                </div>
-                <div class="col">
-                    <a onclick="channel('ssap://tv/channelDown')">
-                        <img src="./assets/img/down_button.png" alt="" width="52" height="42">
-                    </a>
-                </div>
-            </div>
 
-            <!-- 5 -->
-            <div class="row">
-                <div class="col">
-                    <a onclick="notImplemented()">
-                        <img src="./assets/img/apps_button.png" alt="" width="52" height="42">
-                    </a>
+                <!-- 5 -->
+                <div class="row">
+                    <div class="col click-button">
+                        <a onclick="apps()">
+                            <img src="./assets/img/apps_button.png" alt="" width="52" height="42">
+                        </a>
+                    </div>
+                    <div class="col click-button">
+                        <a onclick="button('HOME')">
+                            <img src="./assets/img/home_button.png" alt="" width="52" height="42">
+                        </a>
+                    </div>
+                    <div class="col click-button">
+                        <a onclick="notImplemented()">
+                            <img src="./assets/img/guide_button.png" alt="" width="52" height="42">
+                        </a>
+                    </div>
                 </div>
-                <div class="col">
-                    <a onclick="button('HOME')">
-                        <img src="./assets/img/home_button.png" alt="" width="52" height="42">
-                    </a>
-                </div>
-                <div class="col">
-                    <a onclick="notImplemented()">
-                        <img src="./assets/img/guide_button.png" alt="" width="52" height="42">
-                    </a>
-                </div>
-            </div>
 
-            <!-- 6 -->
-            <div class="row">
-                <div class="col">
-                    <a onclick="notImplemented()">
-                        <img src="./assets/img/config_button.png" alt="" width="52" height="42">
-                    </a>
+                <!-- 6 -->
+                <div class="row">
+                    <div class="col click-button">
+                        <a onclick="notImplemented()">
+                            <img src="./assets/img/config_button.png" alt="" width="52" height="42">
+                        </a>
+                    </div>
+                    <div class="col click-button">
+                        <a onclick="button('UP')">
+                            <img src="./assets/img/up_button.png" alt="" width="52" height="42">
+                        </a>
+                    </div>
+                    <div class="col click-button">
+                        <a onclick="notImplemented()">
+                            <img src="./assets/img/info_button.png" alt="" width="52" height="42">
+                        </a>
+                    </div>
                 </div>
-                <div class="col">
-                    <a onclick="button('UP')">
-                        <img src="./assets/img/up_button.png" alt="" width="52" height="42">
-                    </a>
-                </div>
-                <div class="col">
-                    <a onclick="notImplemented()">
-                        <img src="./assets/img/info_button.png" alt="" width="52" height="42">
-                    </a>
-                </div>
-            </div>
 
-            <!-- 7 -->
-            <div class="row">
-                <div class="col">
-                    <a onclick="button('LEFT')">
-                        <img src="./assets/img/left_button.png" alt="" width="52" height="42">
-                    </a>
+                <!-- 7 -->
+                <div class="row">
+                    <div class="col click-button">
+                        <a onclick="button('LEFT')">
+                            <img src="./assets/img/left_button.png" alt="" width="52" height="42">
+                        </a>
+                    </div>
+                    <div class="col click-button">
+                        <a onclick="button('ENTER')">
+                            <img src="./assets/img/ok_button.png" alt="" width="52" height="42">
+                        </a>
+                    </div>
+                    <div class="col click-button">
+                        <a onclick="button('RIGHT')">
+                            <img src="./assets/img/right_button.png" alt="" width="52" height="42">
+                        </a>
+                    </div>
                 </div>
-                <div class="col">
-                    <a onclick="button('ENTER')">
-                        <img src="./assets/img/ok_button.png" alt="" width="52" height="42">
-                    </a>
-                </div>
-                <div class="col">
-                    <a onclick="button('RIGHT')">
-                        <img src="./assets/img/right_button.png" alt="" width="52" height="42">
-                    </a>
-                </div>
-            </div>
 
-            <!-- 8 -->
-            <div class="row">
-                <div class="col">
-                    <a onclick="button('BACK')">
-                        <img src="./assets/img/back_button.png" alt="" width="54" height="41">
-                    </a>
+                <!-- 8 -->
+                <div class="row">
+                    <div class="col click-button">
+                        <a onclick="button('BACK')">
+                            <img src="./assets/img/back_button.png" alt="" width="54" height="41">
+                        </a>
+                    </div>
+                    <div class="col click-button">
+                        <a onclick="button('DOWN')">
+                            <img src="./assets/img/down_button.png" alt="" width="52" height="42">
+                        </a>
+                    </div>
+                    <div class="col click-button">
+                        <a onclick="button('EXIT')">
+                            <img src="./assets/img/exit_button.png" alt="" width="52" height="42">
+                        </a>
+                    </div>
                 </div>
-                <div class="col">
-                    <a onclick="button('DOWN')">
-                        <img src="./assets/img/down_button.png" alt="" width="52" height="42">
-                    </a>
-                </div>
-                <div class="col">
-                    <a onclick="button('EXIT')">
-                        <img src="./assets/img/exit_button.png" alt="" width="52" height="42">
-                    </a>
-                </div>
-            </div>
 
-            <!-- 9 -->
-            <div class="row">
-                <div class="col">
-                    <a onclick="channelID('youtube.leanback.v4')">
-                        <img src="./assets/img/youtube_button.png" alt="" width="54" height="41">
-                    </a>
+                <!-- 9 -->
+                <div class="row">
+                    <div class="col click-button">
+                        <a onclick="channelID('youtube.leanback.v4')">
+                            <img src="./assets/img/youtube_button.png" alt="" width="54" height="41">
+                        </a>
+                    </div>
+                    <div class="col click-button">
+                        <a onclick="channelID('netflix')">
+                            <img src="./assets/img/netflix_button.png" alt="" width="52" height="42">
+                        </a>
+                    </div>
+                    <div class="col click-button">
+                        <a onclick="channelID('globoplaywebos')">
+                            <img src="./assets/img/globoplay_button.png" alt="" width="52" height="42">
+                        </a>
+                    </div>
                 </div>
-                <div class="col">
-                    <a onclick="channelID('netflix')">
-                        <img src="./assets/img/netflix_button.png" alt="" width="52" height="42">
-                    </a>
-                </div>
-                <div class="col">
-                    <a onclick="channelID('globoplaywebos')">
-                        <img src="./assets/img/globoplay_button.png" alt="" width="52" height="42">
-                    </a>
-                </div>
-            </div>
-
-
+                <br>
+                <div>by<a href="https://maatheusgois.ninja" target="_blank">gois</a></div>
+            </section>
             <!-- END -->
         </div>
 

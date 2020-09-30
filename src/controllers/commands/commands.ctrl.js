@@ -51,6 +51,43 @@ module.exports = {
       if (!global.globalLGTV.isConnected()) {
         return res.json({
           success: false,
+          message: 'tv not stay connected'
+        })
+      }
+      global.globalLGTV.request(command, value, function (err, response) {
+        if (err) {
+          return res.json({
+            success: false,
+            message: err.message
+          })
+        }
+        return res.json({
+          success: true,
+          message: response
+        })
+      })
+    } catch (error) {
+      return res.json({
+        success: false,
+        message: error.message
+      })
+    }
+  },
+
+  mute: (req, res, next) => {
+    try {
+      const command = req.body.command
+      const value = req.body.value || {}
+
+      if (!command) {
+        return res.json({
+          success: false,
+          message: 'command is required'
+        })
+      }
+      if (!global.globalLGTV.isConnected()) {
+        return res.json({
+          success: false,
           message: 'tv not stay cconnected'
         })
       }

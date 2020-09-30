@@ -1,1 +1,1 @@
-global.globalLGTV = {}
+global.globalLGTV = {};

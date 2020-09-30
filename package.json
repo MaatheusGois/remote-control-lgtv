@@ -6,8 +6,9 @@
   "scripts": {
     "postinstall": "install-app-deps",
     "start": "node server",
+    "start:dev": "nodemon -e js,json,html server.js",
     "start:electron": "electron .",
-    "nodemon": "nodemon -e js,json,html server.js",
+    "test": "nodemon src/test",
     "pack": "electron-builder --dir",
     "dist:linux": "electron-builder --linux",
     "dist:windows": "electron-builder -w --ia32",
