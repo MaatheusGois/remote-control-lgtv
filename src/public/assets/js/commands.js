@@ -71,7 +71,7 @@ const apps = async () => {
     return;
   }
   sortByKey(items, "title")
-  console.log(items)
+  $("#list").empty()
   for (let i = 0; i < items.length; i++) {
     const title = items[i].title;
     const id = items[i].id;
@@ -81,7 +81,43 @@ const apps = async () => {
                         <img src="./assets/img/next_button.png" alt="" width="52" height="42">
                     </div>
                 </a>`;
-    $("#app-list").append(cell);
+    $("#list").append(cell);
+  }
+  $("#load-full").hide();
+  $("#app-list").show();
+};
+
+const inputs = async () => {
+  const command = "ssap://tv/getExternalInputList";
+  $("#buttons").hide();
+  $("#load-full").show();
+  const res = await channel(command);
+
+  if (!res.success) {
+    $("#buttons").show();
+    $("#load-full").hide();
+    return;
+  }
+  
+  const items = res.message.devices;
+
+  if (!items) {
+    $("#buttons").show();
+    $("#load-full").hide();
+    return;
+  }
+
+  $("#list").empty();
+  for (let i = 0; i < items.length; i++) {
+    const label = items[i].label;
+    const appId = items[i].appId;
+    const cell = `<a onclick="channelID('${appId}')"> 
+                    <div class="row">
+                        <div class="txt">${label}</div>
+                        <img src="./assets/img/next_button.png" alt="" width="52" height="42">
+                    </div>
+                </a>`;
+    $("#list").append(cell);
   }
   $("#load-full").hide();
   $("#app-list").show();

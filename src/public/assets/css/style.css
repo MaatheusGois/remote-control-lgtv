@@ -192,7 +192,7 @@ a:hover {
   opacity: 0.95;
   box-shadow: inset -1px -1px 4px rgba(83, 92, 136, 0.12);
   border-radius: 6px;
-  margin: 20px 0 0 0;
+  margin: 12px 0 0 0;
 
   display: flex;
 	flex-direction: row;

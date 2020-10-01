@@ -17,6 +17,7 @@
 <p>
   <img alt="Preview" src="./preview.png">
 </p>
+
 ### 🏠 [Homepage](https://github.com/MaatheusGois/LGTV-Controller#readme)
 
 ## Install
@@ -28,8 +29,18 @@ npm install
 ## Usage
 
 ```sh
-npm run start
+npm run start:dev
 ```
+
+## Buttons
+Name of the possibles buttons: 
+<p>
+LEFT, RIGHT, DOWN, UP, HOME, MENU, BACK, ENTER, DASH, INFO, ASTERISK, CC, EXIT, MUTE, RED, GREEN, BLUE, VOLUMEUP, VOLUMEDOWN, CHANNELUP, CHANNELDOWN, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+<p>
+
+## Comands
+
+<a href="https://github.com/bendavid/aiopylgtv/blob/master/aiopylgtv/endpoints.py">See on github</a>
 
 ## Author
 
