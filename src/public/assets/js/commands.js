@@ -76,7 +76,7 @@ const apps = async () => {
     const title = items[i].title;
     const id = items[i].id;
     const cell = `<a onclick="channelID('${id}')"> 
-                    <div class="row">
+                    <div class="row click-button">
                         <div class="txt">${title}</div>
                         <img src="./assets/img/next_button.png" alt="" width="52" height="42">
                     </div>
@@ -112,7 +112,7 @@ const inputs = async () => {
     const label = items[i].label;
     const appId = items[i].appId;
     const cell = `<a onclick="channelID('${appId}')"> 
-                    <div class="row">
+                    <div class="row click-button">
                         <div class="txt">${label}</div>
                         <img src="./assets/img/next_button.png" alt="" width="52" height="42">
                     </div>
