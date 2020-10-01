@@ -5,7 +5,7 @@ module.exports = {
       if (global.isSend) {
         return res.json({
           success: false,
-          message: "command is required",
+          message: "Aguarde o próximo comando...",
         });
       }
       global.isSend = true;
@@ -15,13 +15,13 @@ module.exports = {
       if (!command) {
         return res.json({
           success: false,
-          message: "command is required",
+          message: "Algo deu errado",
         });
       }
       if (!global || !global.globalLGTV.isConnected()) {
         return res.json({
           success: false,
-          message: "tv not stay connected",
+          message: "Verifique se a televisão está ligade e conectada.",
         });
       }
       global.globalLGTV.getSocket(

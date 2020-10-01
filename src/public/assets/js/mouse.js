@@ -35,7 +35,7 @@ const reads = () => {
   var mouseDown = false;
 
   $("#board")
-    .mousedown((e) => {
+    .mousedown(() => {
       isDragging = false;
       mouseDown = true;
     })
@@ -61,7 +61,7 @@ const reads = () => {
       isDragging = false;
       mouseDown = false;
       if (!wasDragging) {
-        click()
+        click();
       }
     });
 };

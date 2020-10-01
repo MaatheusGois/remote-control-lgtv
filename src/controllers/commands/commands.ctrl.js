@@ -6,13 +6,13 @@ module.exports = {
       if (!command) {
         return res.json({
           success: false,
-          message: 'command is required'
+          message: 'Algo deu errado.'
         })
       }
-      if (!global || !global.globalLGTV.isConnected()) {
+      if (!global.globalLGTV || !global.globalLGTV.isConnected()) {
         return res.json({
           success: false,
-          message: "tv not stay cconnected",
+          message: "Verifique se a televisão está ligade e conectada.",
         });
       }
       global.globalLGTV.getSocket(
@@ -45,13 +45,13 @@ module.exports = {
       if (!command) {
         return res.json({
           success: false,
-          message: 'command is required'
+          message: 'Algo deu errado.'
         })
       }
-      if (!global || !global.globalLGTV.isConnected()) {
+      if (!global.globalLGTV || !global.globalLGTV.isConnected()) {
         return res.json({
           success: false,
-          message: "tv not stay connected",
+          message: "Verifique se a televisão está ligade e conectada.",
         });
       }
       global.globalLGTV.request(command, value, function (err, response) {
@@ -82,13 +82,13 @@ module.exports = {
       if (!command) {
         return res.json({
           success: false,
-          message: 'command is required'
+          message: 'Algo deu errado.'
         })
       }
-      if (!global || !global.globalLGTV.isConnected()) {
+      if (!global.globalLGTV || !global.globalLGTV.isConnected()) {
         return res.json({
           success: false,
-          message: "tv not stay connected",
+          message: "Verifique se a televisão está ligade e conectada.",
         });
       }
       global.globalLGTV.request(command, value, function (err, response) {
