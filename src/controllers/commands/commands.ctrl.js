@@ -9,11 +9,11 @@ module.exports = {
           message: 'command is required'
         })
       }
-      if (!global.globalLGTV.isConnected()) {
+      if (!global || !global.globalLGTV.isConnected()) {
         return res.json({
           success: false,
-          message: 'tv not stay cconnected'
-        })
+          message: "tv not stay cconnected",
+        });
       }
       global.globalLGTV.getSocket(
         'ssap://com.webos.service.networkinput/getPointerInputSocket',
@@ -48,11 +48,11 @@ module.exports = {
           message: 'command is required'
         })
       }
-      if (!global.globalLGTV.isConnected()) {
+      if (!global || !global.globalLGTV.isConnected()) {
         return res.json({
           success: false,
-          message: 'tv not stay connected'
-        })
+          message: "tv not stay connected",
+        });
       }
       global.globalLGTV.request(command, value, function (err, response) {
         if (err) {
@@ -85,11 +85,11 @@ module.exports = {
           message: 'command is required'
         })
       }
-      if (!global.globalLGTV.isConnected()) {
+      if (!global || !global.globalLGTV.isConnected()) {
         return res.json({
           success: false,
-          message: 'tv not stay cconnected'
-        })
+          message: "tv not stay connected",
+        });
       }
       global.globalLGTV.request(command, value, function (err, response) {
         if (err) {

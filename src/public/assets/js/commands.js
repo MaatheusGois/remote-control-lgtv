@@ -16,7 +16,6 @@ const channel = async (command, value) => {
       body,
     });
     const resJson = await res.json();
-    console.log(resJson);
     return resJson;
   } catch (error) {
     console.error(error);
@@ -28,12 +27,12 @@ const button = (command) => {
     .then(function (response) {
       return response.json();
     })
-    .then(function (json) {
-      console.log(json);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+    // .then(function (json) {
+    //   console.log(json);
+    // })
+    // .catch(function (error) {
+    //   console.log(error);
+    // });
 };
 
 const muteButton = () => {
@@ -126,6 +125,7 @@ const inputs = async () => {
 const returnButton = () => {
   $("#load-full").hide();
   $("#app-list").hide();
+  $("#mouse").hide();
   $("#buttons").show();
 };
 

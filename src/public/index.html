@@ -27,6 +27,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" defer></script>
 
     <script src="./assets/js/commands.js" defer></script>
+    <script src="./assets/js/mouse.js" defer></script>
     <script src="./assets/js/power.js" defer></script>
     <!-- END SCRIPTS -->
 
@@ -71,6 +72,24 @@
                 <!-- END LIST -->
             </section>
             <!-- END APP-LIST -->
+
+            <!-- MOUSE -->
+            <section id="mouse" style="display: none;">
+                <!-- BUTTON BACK -->
+                <div class="returnButton">
+                    <a onclick="returnButton()">
+                        <img src="./assets/img/return_button.png" alt="" width="52" height="42">
+                    </a>
+                </div>
+                <!-- END BUTTON BACK -->
+            
+                <!-- LIST -->
+                <!-- channelID('globoplaywebos') -->
+                <div id="board"></div>
+            
+                <!-- END LIST -->
+            </section>
+            <!-- END MOUSE -->
 
             <!-- BUTTONS -->
             <section id="buttons">
@@ -160,7 +179,7 @@
                         </a>
                     </div>
                     <div class="col click-button">
-                        <a onclick="button('DASH')">
+                        <a onclick="channelID('com.webos.app.tvguide')">
                             <img src="./assets/img/guide_button.png" alt="" width="52" height="42">
                         </a>
                     </div>
@@ -169,7 +188,7 @@
                 <!-- 6 -->
                 <div class="row">
                     <div class="col click-button">
-                        <a onclick="button('ASTERISK')">
+                        <a onclick="mouseInit()">
                             <img src="./assets/img/config_button.png" alt="" width="52" height="42">
                         </a>
                     </div>

@@ -159,7 +159,7 @@ a:hover {
 #load-full {
   height: 100%;
 }
-#load-full .returnButton {
+.returnButton {
   display: flex;
 }
 #load-full .container {
@@ -180,10 +180,6 @@ a:hover {
 /* Hide scrollbar for Chrome, Safari and Opera */
 #app-list::-webkit-scrollbar {
     display: none;
-}
-
-#app-list .returnButton {
-  display: flex;
 }
 
 #app-list .row {
@@ -220,3 +216,34 @@ section {
   margin: 0 -5px;
 }
 /* END SECTIONS */
+
+
+/* Wifi IMG */
+#wifi {
+  height: 48px;
+  width: 52px;
+  object-fit: contain;
+}
+/* End Wifi IMG */
+
+
+/* MOUSE */
+
+#mouse #board {
+  height: 200px;
+  background: linear-gradient(116.82deg, #494f74 0%, #3a3f5e 100%);
+  opacity: 0.95;
+  box-shadow: inset -1px -1px 4px rgba(83, 92, 136, 0.12);
+  border-radius: 6px;
+  margin: 12px 0 0 0;
+
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: stretch;
+  align-content: stretch;
+  
+  padding: 0 8px;
+}
+/* END MOUSE */
