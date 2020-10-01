@@ -1,7 +1,6 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 const start = () => {
-  console.log("connet");
   $("#wifi").hide();
   $("#load").show();
   fetch("http://localhost:6767/connect")
@@ -9,7 +8,6 @@ const start = () => {
       return response.json();
     })
     .then(function (response) {
-      console.log(response);
       if (response.success) {
         $("#load").hide();
         $("#wifi").show().attr("src", "./assets/img/on_wifi_button.png");

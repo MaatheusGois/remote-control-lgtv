@@ -1,57 +1,62 @@
 module.exports = {
+  isConnected: (req, res, next) => {
+    res.json({
+      success: !!global.globalLGTV
+    })
+  },
   connect: (req, res, next) => {
     try {
-      var lgtv = require('../../lgtv')({
-        url: 'ws://lgwebostv:3000'
-      })
+      var lgtv = require("../../lgtv")({
+        url: "ws://lgwebostv:3000",
+      });
 
-      lgtv.on('error', function (error) {
-        lgtv.disconnect()
+      lgtv.on("error", function (error) {
+        lgtv.disconnect();
         return res.json({
           success: false,
-          message: error.message
-        })
-      })
+          message: error.message,
+        });
+      });
 
-      lgtv.on('connecting', function () {
-        console.log('connecting...')
-      })
+      lgtv.on("connecting", function () {
+        console.log("connecting...");
+      });
 
-      lgtv.on('connect', function () {
-        global.globalLGTV = lgtv
+      lgtv.on("connect", function () {
+        global.globalLGTV = lgtv;
         return res.json({
-          success: true
-        })
-      })
+          success: true,
+        });
+      });
 
-      lgtv.on('prompt', function () {
-        console.log('please authorize on TV')
-      })
+      lgtv.on("prompt", function () {
+        console.log("please authorize on TV");
+      });
 
-      lgtv.on('close', function () {
+      lgtv.on("close", function () {
         return res.json({
           success: false,
-          message: 'close'
-        })
-      })
+          message: "close",
+        });
+      });
     } catch (error) {
       return res.json({
         success: false,
-        message: error.message
-      })
+        message: error.message,
+      });
     }
   },
   disconnect: (req, res, next) => {
     try {
-      global.globalLGTV.disconnect()
+      global.globalLGTV.disconnect();
       return res.json({
-        success: true
-      })
+        success: true,
+      });
     } catch (error) {
       return res.json({
         success: false,
-        message: error.message
-      })
+        message: error.message,
+      });
     }
-  }
-}
+  },
+};

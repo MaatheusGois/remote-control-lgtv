@@ -1,6 +1,24 @@
 /* eslint-disable no-unused-vars */
+const isConnected = async () => {
+  return new Promise(async (resolve) => {
+    const response = await fetch("http://localhost:6767/isConnected");
+    const response_1 = await response.json();
+    resolve(response_1.success);
+    if (response_1.success) { 
+      $("#wifi").attr("src", "./assets/img/on_wifi_button.png");
+      return 
+    }
+    swal(
+      "Opps...",
+      "Clique no ícone de rede acima para iniciar a conexão."
+    );
+  });
+};
 var mute = false;
 const channel = async (command, value) => {
+  if (!(await isConnected())) {
+    return;
+  }
   const body = JSON.stringify({
     command,
     value,
@@ -23,16 +41,16 @@ const channel = async (command, value) => {
 };
 
 const button = (command) => {
-  fetch(`http://localhost:6767/button/${command}`)
-    .then(function (response) {
-      return response.json();
-    })
-    // .then(function (json) {
-    //   console.log(json);
-    // })
-    // .catch(function (error) {
-    //   console.log(error);
-    // });
+  // if (!await isConnected()) { return }
+  fetch(`http://localhost:6767/button/${command}`).then(function (response) {
+    return response.json();
+  });
+  // .then(function (json) {
+  //   console.log(json);
+  // })
+  // .catch(function (error) {
+  //   console.log(error);
+  // });
 };
 
 const muteButton = () => {
@@ -53,6 +71,9 @@ function sortByKey(array, key) {
 }
 
 const apps = async () => {
+  if (!(await isConnected())) {
+    return;
+  }
   const command = "ssap://com.webos.applicationManager/listLaunchPoints";
   $("#buttons").hide();
   $("#load-full").show();
@@ -69,8 +90,8 @@ const apps = async () => {
     $("#load-full").hide();
     return;
   }
-  sortByKey(items, "title")
-  $("#list").empty()
+  sortByKey(items, "title");
+  $("#list").empty();
   for (let i = 0; i < items.length; i++) {
     const title = items[i].title;
     const id = items[i].id;
@@ -87,6 +108,9 @@ const apps = async () => {
 };
 
 const inputs = async () => {
+  if (!(await isConnected())) {
+    return;
+  }
   const command = "ssap://tv/getExternalInputList";
   $("#buttons").hide();
   $("#load-full").show();
@@ -97,7 +121,7 @@ const inputs = async () => {
     $("#load-full").hide();
     return;
   }
-  
+
   const items = res.message.devices;
 
   if (!items) {
