@@ -11,7 +11,8 @@
     "test": "nodemon src/test",
     "pack": "electron-builder --dir",
     "dist:linux": "electron-builder --linux",
-    "dist:windows": "electron-builder -w --ia32",
+    "dist:windows:x32": "electron-builder -w --ia32",
+    "dist:windows:x64": "electron-builder -w --x64",
     "dist:mac": "electron-builder -m"
   },
   "homepage": "https://github.com/MaatheusGois/Remote-Control-LGTV",
