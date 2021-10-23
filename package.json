@@ -54,7 +54,8 @@
     "persist-path": "^1.0.2",
     "pm2": "^4.4.0",
     "util": "^0.12.2",
-    "websocket": "^1.0.31"
+    "websocket": "^1.0.31",
+    "wol": "^1.0.7"
   },
   "author": {
     "name": "Matheus Gois",
